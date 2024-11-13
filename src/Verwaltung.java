@@ -1,8 +1,10 @@
+import java.util.Scanner;
+
 public class Verwaltung {
     private Scanner scanner;
-    private Caeser caeser;
+    private Caesar caesar;
 
-    public static void main(string[] args) {
+    public static void main(String[] args) {
         new Verwaltung();
     }
 
@@ -13,27 +15,21 @@ public class Verwaltung {
             System.out.println("[1] verschluessen");
             System.out.println("[2] entschluessen");
             int option = scanner.nextInt();
-            scanner.nextLine(); // nextInt scannt keine neue Zeile. Ohne diese Anweisung würde das nächste gewollte nextLine nicht funktionieren.
+            scanner.nextLine();
             if (option == 1) {
                 System.out.println("Gib das Wort an, welches Sie verschluesseln wollen:");
+                String zeichenkette=scanner.nextLine();
+                System.out.println("Gib den Schlüssel an:");
                 String schluesselString = scanner.nextLine();
-                this.test.setEingabe(entschluessen);
-                this.test.entschluessen();
+                int schluessel = Integer.parseInt(schluesselString);
+                this.caesar.setKt(zeichenkette);
+                this.caesar.setS(schluessel);
 
-            } else if (option == 2) {
-                // this.sendMessage();
-                System.out.println("Gib das Wort an, welches Sie entschluesseln wollen:");
-                String zeichenkette = scanner.nextLine();
-                this.test.setEingabe(zeichenkette);
-                this.test.palindromTest();
-                System.out.println("Gib den Schluessel an : " + this.test.isIstPalindrom());
+            };
+
+
             }
 
             }
-            System.out.println();
+
         }
-    }
-
-}
-
- }

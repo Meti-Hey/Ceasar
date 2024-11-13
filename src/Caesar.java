@@ -6,6 +6,10 @@ public class Caesar {
 
         }
         public void verschluesseln(){
+            for (int i=0 ;i < Kt.length()-1 ;i++) {
+                int h = this.getASCII(Kt.charAt(i));
+                gt = gt + this.getChar(h + S);
+            }
 
         }
         public void entschluesseln(){
@@ -26,4 +30,7 @@ public class Caesar {
         public void getS (int pWert){
 
         }
+
+    public void setS(int schluessel) {
+    }
 }
