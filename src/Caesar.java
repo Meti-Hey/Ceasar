@@ -1,7 +1,7 @@
 public class Caesar {
     private String Kt;
     private int S;
-    //horn
+    //horn2
     private String gt;
         public Caesar(){
             gt ="";
