@@ -7,6 +7,7 @@ public class Caesar {
             Kt ="";
         }
         public void verschluesseln(){
+
             for (int i=0 ;i < Kt.length();i++) {
                 int h = this.getASCII(Kt.charAt(i));
                 gt = gt + this.getChar(h + S);
@@ -15,8 +16,8 @@ public class Caesar {
         }
         public void entschluesseln(){
             for (int i=0 ;i < gt.length();i++) {
-                 int k = this.getASCII(gt.charAt(i));
-                gt = gt + this.getChar(k - S);
+                 int h = this.getASCII(gt.charAt(i));
+                Kt = Kt + this.getChar(h - S);
             }
 
         }
@@ -47,12 +48,10 @@ public String getKt(){
             return S;
     }
 
-    public String setGt(){
-    return gt;
-}
+    public void setGt(String pgt){
+      gt=pgt;
 
-
-
+    }
 
     public String getGt(){
             return gt;

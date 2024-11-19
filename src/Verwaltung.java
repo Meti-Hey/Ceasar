@@ -27,20 +27,21 @@ public class Verwaltung {
                 this.caesar.setS(schluessel);
                 this.caesar.verschluesseln();
                 System.out.println(this.caesar.getGt());
-                  }
 
-             else if (option == 2) {
-                      System.out.println("Gib das Wort an, welches Sie entschluesseln wollen:");
-                      String zeichenkette = scanner.nextLine();
-                      System.out.println("Gib den Schlüssel an:");
-                      String schluesselString = scanner.nextLine();
-                      int schluessel = Integer.parseInt(schluesselString);
-                      caesar = new Caesar();
-                      this.caesar.setGt();
-                      this.caesar.setS(schluessel);
-                      this.caesar.entschluesseln();
-                      System.out.println(this.caesar.getKt());
-                }
+            } else if (option == 2) {
+                System.out.println("Gib das Wort an, welches Sie entschluesseln wollen:");
+                String zeichenkette = scanner.nextLine();
+                System.out.println("Gib den Schlüssel an:");
+                String schluesselString = scanner.nextLine();
+                int schluessel = Integer.parseInt(schluesselString);
+                caesar = new Caesar();
+                this.caesar.setGt(zeichenkette);
+                this.caesar.setS(schluessel);
+                this.caesar.entschluesseln();
+                System.out.println(this.caesar.getKt());
             }
         }
     }
+}
+
+
