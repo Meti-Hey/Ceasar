@@ -14,10 +14,16 @@ public class Caesar {
 
         }
         public void entschluesseln(){
-
-
+            for (int i=0 ;i < gt.length();i++) {
+                 int k = this.getASCII(gt.charAt(i));
+                gt = gt + this.getChar(k - S);
+            }
 
         }
+
+
+
+
         private int getASCII (char pWert){
             return  pWert;
         }
@@ -41,7 +47,14 @@ public String getKt(){
             return S;
     }
 
+    public String setGt(){
+    return gt;
+}
+
+
+
+
     public String getGt(){
             return gt;
     }
-}
+    }
