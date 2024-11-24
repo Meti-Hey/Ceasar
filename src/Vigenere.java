@@ -1,40 +1,63 @@
-public class Vigenere {
+package src;
 
-    private String gt;
+public class Viginere {
 
-private String kt;
+    private String Kt;
 
-private String schluessel;
-public Vigenere(){
+    private String S;
 
-}
-public void verschluesseln(){}
+    private String Gt;
 
-public void entschluesseln(){
+    public Viginere() {
+        Gt = "";
+        Kt = "";
+        S = "";
+    }
 
-}
-private char zahlenZuBuchstaben(int pWert){
+    public void verschluesseln() {
+        for ( int i = 0 ; i < Kt.length() ; i++) {
+            int j = this.getASCII(Kt.charAt(i));
+            int h = this.getASCII(S.charAt(i));
+            Gt = Gt + this.getChar(j + h);
+        }
+    }
 
-}
-private int buchstabenZuZahlen(char pWert){
+    public void entschluesseln() {
+        for (int i = 0; i < Gt.length(); i++) {
+            int n = this.getASCII(Gt.charAt(i));
+            int m = this.getASCII(S.charAt(i));
+            Kt = Kt + this.getChar(n - m);
+        }
+    }
+    private int getASCII (char pWert) {
+        return  pWert;
+    }
+    private char getChar(int pWert) {
+        return (char) pWert;
+    }
 
-}
-public String getGt(){
-return gt;
-}
-public void setGt(String pGt){
+    public void setGt(String pGt) {
+        Gt = pGt;
+    }
 
-}
-public String getKt(){
- return kt;
-}
-public void setKt(String pGt){
+    public String getGt() {
+        return Gt;
+    }
+    public void setKt (String pKt){
+        Kt = pKt;
+    }
 
-}
-public String getSchluessek(){
+    public String getKt() {
+        return Kt;
+    }
 
-}
-public void setSchluessel(String pSchluessel){
+    public void setS (String pS) {
+        S =  pS;
+    }
 
-}
+    public String getS () {
+        return S;
+    }
+
+
 }
