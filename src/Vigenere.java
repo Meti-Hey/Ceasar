@@ -1,4 +1,6 @@
-package src;
+ppackage src;
+
+public class Vigenere extends Kryptomat  {
 
 public class Viginere {
 
@@ -58,6 +60,6 @@ public class Viginere {
     public String getS () {
         return S;
     }
-
+}
 
 }
