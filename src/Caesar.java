@@ -1,41 +1,38 @@
+package src;
+
+public class Caesar extends Kryptomat  {
+
 public class Caesar {
     private String Kt;
     private int S;
-    //horn2
-    private String gt;
-        public Caesar(){
-            gt ="";
-            Kt ="";
+    private String Gt;
+    public Caesar(){
+        Gt ="";
+        Kt ="";
+    }
+    public void verschluesseln(){
+        Gt = "";
+        for (int i = 0 ; i < Kt.length() ; i++) {
+            int h = this.getASCII(Kt.charAt(i));
+            Gt = Gt + this.getChar(h + S);
         }
-        public void verschluesseln(){
 
-            for (int i=0 ;i < Kt.length();i++) {
-                int h = this.getASCII(Kt.charAt(i));
-                gt = gt + this.getChar(h + S);
-            }
-
-        }
-        public void entschluesseln(){
-            for (int i=0 ;i < gt.length();i++) {
-                 int h = this.getASCII(gt.charAt(i));
-                Kt = Kt + this.getChar(h - S);
-            }
-
+    }
+    public void entschluesseln(){
+        Kt = "";
+        for (int i = 0; i < Gt.length() ; i++) {
+            int k = this.getASCII(Gt.charAt(i));
+            Kt = Kt + this.getChar(k - S);
         }
 
 
-
-
-        private int getASCII (char pWert){
-            return  pWert;
-        }
-        private char getChar(int pWert){
-            return (char) pWert;
-        }
-
-public String getKt(){
-            return Kt;
-}
+    }
+    private int getASCII (char pWert) {
+        return  pWert;
+    }
+    private char getChar(int pWert) {
+        return (char) pWert;
+    }
 
     public void setKt(String kt) {
         Kt = kt;
@@ -45,16 +42,19 @@ public String getKt(){
         S = s;
     }
 
-    public int getS(){
-            return S;
+    public void setGt(String gt) {
+        Gt = gt;
     }
 
-    public void setGt(String pgt){
-      gt=pgt;
-
+    public int getS() {
+        return S;
     }
 
-    public String getGt(){
-            return gt;
+    public String getGt() {
+        return Gt;
     }
+
+    public String getKt() {
+        return Kt;
     }
+}
